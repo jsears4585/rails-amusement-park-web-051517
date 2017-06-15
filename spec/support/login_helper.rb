@@ -12,6 +12,8 @@ module LoginHelper
     fill_in("user[nausea]", :with => "2")
     fill_in("user[tickets]", :with => "15")
     fill_in("user[password]", :with => "password")
+    fill_in("user[password_confirmation]", :with => "password")
+    
     click_button('Create User')
   end
 
