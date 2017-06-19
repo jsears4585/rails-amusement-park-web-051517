@@ -1,3 +1,11 @@
+<p id="notice"><%= notice %></p>
+
+<% if @message %>
+  <div class="center alert">
+    <p><%= @message %></p>
+  </div>
+<% end %>
+
 <h1>User Profile</h1>
 
 <h3>Name: <%= @user.name %></h3>
@@ -7,3 +15,5 @@
 <p>Happiness: <%= @user.happiness %></p>
 <p>Nausea: <%= @user.nausea %></p>
 <p>Height: <%= @user.height %></p>
+
+<%= link_to("See attractions", attractions_path) %>

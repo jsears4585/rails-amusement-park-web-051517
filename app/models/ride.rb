@@ -24,7 +24,7 @@ class Ride < ActiveRecord::Base
       happiness: new_happiness,
       nausea: new_nausea
     )
-    "Thanks for riding #{self.attraction.name}!"
+    "Thanks for riding the #{self.attraction.name}!"
   end
 
   def tall_enough?

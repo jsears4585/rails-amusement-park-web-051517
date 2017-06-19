@@ -1,24 +1,12 @@
 class RidesController < ApplicationController
 
-  def index
-  end
-
   def new
-  end
-
-  def create
-  end
-
-  def show
-  end
-
-  def edit
-  end
-
-  def update
-  end
-
-  def destroy
+    @ride = Ride.create(
+      :user_id => params[:user_id],
+      :attraction_id => params[:attraction_id]
+    )
+    @message = @ride.take_ride
+    redirect_to user_path(@ride.user, :message => @message)
   end
 
 end
